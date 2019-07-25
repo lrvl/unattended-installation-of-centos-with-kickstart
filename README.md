@@ -14,16 +14,14 @@ The server on which the customized bootable CentOS ISO will be created requires 
 
 #### Steps to create the customized ISO
 
-----
-https://serverfault.com/questions/517908/how-to-create-a-custom-iso-image-in-centos#521672
-----
+- https://serverfault.com/questions/517908/how-to-create-a-custom-iso-image-in-centos#521672
 
 #### Customizations 
 
 - Reduce boot delay
--- https://askubuntu.com/questions/148095/how-do-i-set-the-grub-timeout-and-the-grub-default-boot-entry
+   - https://askubuntu.com/questions/148095/how-do-i-set-the-grub-timeout-and-the-grub-default-boot-entry
 - Use ETH0 instead of variable BIOS names
--- https://thornelabs.net/posts/kickstart-centos-7-with-eth0-instead-of-predictable-network-interface-names.html
+   - https://thornelabs.net/posts/kickstart-centos-7-with-eth0-instead-of-predictable-network-interface-names.html
 
 #### Example ks.cfg using static IP and ETH0 as network interface name
 
@@ -49,7 +47,7 @@ lang en_US.UTF-8
 network  --bootproto=static --device=eth0 --gateway=10.9.37.254 --ip=10.9.37.81 --mtu=9000 --nameserver=10.9.12.1,10.9.12.2 --netmask=255.255.255.0 --noipv6 --activate
 network  --hostname=localhost.localdomain
 
-# Root password
+# Root password = root
 rootpw --iscrypted $6$Po6LRe3a4uVDtqq4$H/Rbe.NSsWF9EPUS.8QV2.WnLoSaAff0gRVjSYVhTb49EmsGr58KB45gscnSt8lyQJKjShrskba5KEvkybzNg/
 # System services
 services --disabled="chronyd"
