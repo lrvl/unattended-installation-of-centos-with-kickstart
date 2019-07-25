@@ -38,10 +38,10 @@ graphical
 firstboot --disable
 ignoredisk --only-use=sda
 # Disable firewall and selinux
-firewall ----disabled
-selinux ----disabled
+firewall --disabled
+selinux --disabled
 # Accept Eula
-eula ----agreed
+eula --agreed
 # Reboot after installing
 reboot
 # Keyboard layouts
