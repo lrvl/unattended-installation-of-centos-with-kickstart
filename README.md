@@ -35,8 +35,15 @@ cdrom
 # Use graphical install
 graphical
 # Run the Setup Agent on first boot
-firstboot --enable
+firstboot --disable
 ignoredisk --only-use=sda
+# Disable firewall and selinux
+firewall ----disabled
+selinux ----disabled
+# Accept Eula
+eula ----agreed
+# Reboot after installing
+reboot
 # Keyboard layouts
 keyboard --vckeymap=us --xlayouts='us'
 # System language
